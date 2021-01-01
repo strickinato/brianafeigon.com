@@ -1,0 +1,92 @@
+$yellow: rgb(234, 191, 44);
+$salmon: rgb(248,191,179);
+$white: rgb(238,239,233);
+$green: rgb(127, 128, 59);
+$dark-green: rgb(30,58,33);
+
+$box-size: 300px;
+
+html, body, p {
+    margin: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (min-width: 600px) {
+        align-items: center;
+        height: 100%;
+    }
+
+    background: repeating-linear-gradient(
+        135deg,
+        $yellow,
+        $yellow 40px,
+        $white 40px,
+        $white 80px
+    );
+}
+
+.box {
+
+    @media screen and (min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(2, $box-size);
+
+        .inner-box:nth-of-type(3) {
+            order: 4;
+        }
+  
+    }
+  
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px $dark-green; 
+}
+
+.inner-box {
+    width: $box-size;
+    height: $box-size;
+}
+
+.big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green;
+    color: $white;
+    font-weight: 800;
+    font-size: 4em;
+    font-family: 'EB Garamond', serif;
+}
+
+.little {
+    background-color: $salmon;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: $dark-green;
+}
+
+.sayhi {
+    font-size: 18px;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: $dark-green;
+}
