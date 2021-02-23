@@ -6,6 +6,7 @@ $dark-green: rgb(30,58,33);
 
 $box-size: 300px;
 
+
 html, body, p {
     margin: 0;
 }
@@ -32,17 +33,17 @@ h1, h2, h3, p {
         height: 100%;
     }
 
-    background: repeating-linear-gradient(
-        135deg,
-        $yellow,
-        $yellow 40px,
-        $white 40px,
-        $white 80px
-    );
+    background-color: #0f2917;
+    // background: repeating-linear-gradient(
+    //     135deg,
+    //     $yellow,
+    //     $yellow 40px,
+    //     $white 40px,
+    //     $white 80px
+    // );
 }
 
 .box {
-
     @media screen and (min-width: 600px) {
         display: grid;
         grid-template-columns: repeat(2, $box-size);
@@ -52,7 +53,6 @@ h1, h2, h3, p {
         }
   
     }
-  
     margin: 0 auto;
     box-shadow: 0px 0px 20px $dark-green; 
 }
@@ -60,33 +60,38 @@ h1, h2, h3, p {
 .inner-box {
     width: $box-size;
     height: $box-size;
+    text-align: center;
 }
-
+.green {
+    background-color: $green;
+    color: $white;
+}
+.pink {
+    background-color: $salmon;
+    color: $dark-green;
+}
+.sans {
+    font-family: 'Balthazar', serif;
+}
+.serif {
+    font-family: 'EB Garamond', serif;
+}
 .big {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $green;
-    color: $white;
     font-weight: 800;
     font-size: 4em;
-    font-family: 'EB Garamond', serif;
 }
 
 .little {
-    background-color: $salmon;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    color: $dark-green;
-}
-
-.sayhi {
-    font-size: 18px;
 }
 
 a:link, a:visited, a:hover, a:active {
-    color: $dark-green;
+    color: $white;
 }
